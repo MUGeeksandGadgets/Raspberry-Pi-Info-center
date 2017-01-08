@@ -1,10 +1,12 @@
 # Author: Patrick Shinn
 # version: 1/6/16
-import os
-from flask import Flask, render_template
-from apixu_client import ApixuClient
 import calendar
 import datetime
+import os
+
+from flask import Flask, render_template
+
+from apixu_API.apixu_client import ApixuClient
 
 # setting up flask
 app = Flask(__name__)
@@ -34,7 +36,7 @@ def index():
 
 # api key and client for the weather API
 pwd = os.path.dirname(os.path.realpath(__file__))
-api_key = open(pwd + "/Apixu.key", "r")
+api_key = open(pwd + "/secrets/Apixu.key", "r")
 api_key = api_key.readline()
 weather_client = ApixuClient(api_key=api_key)
 
@@ -83,6 +85,7 @@ def get_forecast():
 
 
 # get the google calendar info
+# todo learn the google calendar api
 def get_calendar():
     return None
 
