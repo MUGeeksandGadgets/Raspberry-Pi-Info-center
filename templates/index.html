@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="/static/StyleSheet.css">
+<meta http-equiv="refresh" content="600" > <!-- this causes the page to refresh every 10 minutes -->
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Test</title>
+</head>
+<body>
+    <h2>Current Weather</h2>
+        <p>
+            Current temp: {{ current_temp }} &deg;F
+            <br/>
+             Current Conditions: {{ current_weather }}
+            <br/>
+             Wind speed: {{ wind_speed }} mph
+        <hr/>
+
+    <h2>5 Day Forecast</h2>
+        <h3>{{ date0 }} (Today) </h3>
+            <p>
+                High: {{ high0 }} &deg;F <br/>
+                Low: {{ low0 }} &deg;F <br/>
+                Condition: {{ condition0 }}
+            </p>
+        <h3>{{ date1 }}</h3>
+            <p>
+                High: {{ high1 }} &deg;F <br/>
+                Low: {{ low1 }} &deg;F <br/>
+                Condition: {{ condition1 }}
+            </p>
+        <h3>{{ date2 }}</h3>
+            <p>
+                High: {{ high2 }} &deg;F <br/>
+                Low: {{ low2 }} &deg;F <br/>
+                Condition: {{ condition2 }}
+            </p>
+        <h3>{{ date3 }}</h3>
+            <p>
+                High: {{ high3 }} &deg;F <br/>
+                Low: {{ low3 }} &deg;F <br/>
+                Condition: {{ condition3 }}
+            </p>
+        <h3>{{ date4 }}</h3>
+            <p>
+                High: {{ high4 }} &deg;F <br/>
+                Low: {{ low4 }}  <br/>
+                Condition: {{ condition4 }}
+            </p>
+        <hr/>
+
+</body>
+</html>
