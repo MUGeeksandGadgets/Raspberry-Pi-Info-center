@@ -2,7 +2,7 @@
 # version: 1/6/16
 import os
 from flask import Flask, render_template
-from client import ApixuClient
+from apixu_client import ApixuClient
 import calendar
 import datetime
 
