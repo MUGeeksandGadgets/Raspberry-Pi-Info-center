@@ -1,12 +1,12 @@
 # Author: Patrick Shinn
 # version: 1/6/16
+from flask import Flask, render_template
+from apixu_API.apixu_client import ApixuClient
 import calendar
 import datetime
 import os
 
-from flask import Flask, render_template
 
-from apixu_API.apixu_client import ApixuClient
 
 # setting up flask
 app = Flask(__name__)
