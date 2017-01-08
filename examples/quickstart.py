@@ -71,7 +71,7 @@ def main():
     print('Getting the upcoming 10 events')
     eventsResult = service.events().list(
         calendarId='primary', timeMin=now, maxResults=20, singleEvents=True,
-        orderBy='startTime').execute()
+        orderBy='startClock').execute()
     events = eventsResult.get('items', [])
 
     if not events:

@@ -6,7 +6,12 @@
     <meta charset="UTF-8">
     <title>Weather Test</title>
 </head>
-<body>
+<script src="/static/clock.js"> // manages the clock</script>
+<body onload="startClock()">
+
+    <h2>Current Time</h2>
+    <div id="clock"></div>
+
     <h2>Current Weather</h2>
         <p>
             Current temp: {{ current_temp }} &deg;F
