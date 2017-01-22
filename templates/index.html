@@ -14,45 +14,74 @@
 
     <h2>Current Weather</h2>
         <p>
-            Current temp: {{ current_temp }} &deg;F
-            <br/>
-             Current Conditions: {{ current_weather }}
-            <br/>
-             Wind speed: {{ wind_speed }} mph
+            <img src="{{ icon }}">
+            <div class="image_divider"></div>
+            Current temp: {{ current_temp }} &deg;F<br/>
+            Current Conditions: {{ current_weather }}<br/>
+            Wind speed: {{ wind_speed }} mph
+        <p/>
         <hr/>
 
     <h2>5 Day Forecast</h2>
-        <h3>{{ date0 }} (Today) </h3>
-            <p>
-                High: {{ high0 }} &deg;F <br/>
-                Low: {{ low0 }} &deg;F <br/>
-                Condition: {{ condition0 }}
-            </p>
-        <h3>{{ date1 }}</h3>
-            <p>
-                High: {{ high1 }} &deg;F <br/>
-                Low: {{ low1 }} &deg;F <br/>
-                Condition: {{ condition1 }}
-            </p>
-        <h3>{{ date2 }}</h3>
-            <p>
-                High: {{ high2 }} &deg;F <br/>
-                Low: {{ low2 }} &deg;F <br/>
-                Condition: {{ condition2 }}
-            </p>
-        <h3>{{ date3 }}</h3>
-            <p>
-                High: {{ high3 }} &deg;F <br/>
-                Low: {{ low3 }} &deg;F <br/>
-                Condition: {{ condition3 }}
-            </p>
-        <h3>{{ date4 }}</h3>
-            <p>
-                High: {{ high4 }} &deg;F <br/>
-                Low: {{ low4 }}  <br/>
-                Condition: {{ condition4 }}
-            </p>
-        <hr/>
-
+    <div id="five_day">
+        <table id="forecast">
+            <tbody>
+                <tr>
+                    <th>{{ date0 }} (Today)</th>
+                    <th>{{ date1 }}</th>
+                    <th>{{ date2 }}</th>
+                    <th>{{ date3 }}</th>
+                    <th>{{ date4 }}</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            <img src="{{ icon0 }}" class="image">
+                            <div class="image_divider"></div>
+                            High: {{ high0 }} &deg;F <br/>
+                            Low: {{ low0 }} &deg;F <br/>
+                            Condition: {{ condition0 }}
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            <img src="{{ icon1 }}" class="image">
+                            <div class="image_divider"></div>
+                            High: {{ high1 }} &deg;F <br/>
+                            Low: {{ low1 }} &deg;F <br/>
+                            Condition: {{ condition1 }}
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            <img src="{{ icon2 }}" class="image">
+                            <div class="image_divider"></div>
+                            High: {{ high2 }} &deg;F <br/>
+                            Low: {{ low2 }} &deg;F <br/>
+                            Condition: {{ condition2 }}
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            <img src="{{ icon3 }}" class="image">
+                            <div class="image_divider"></div>
+                            High: {{ high3 }} &deg;F <br/>
+                            Low: {{ low3 }} &deg;F <br/>
+                            Condition: {{ condition3 }}
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            <img src="{{ icon4 }}" class="image">
+                            <div class="image_divider"></div>
+                            High: {{ high4 }} &deg;F <br/>
+                            Low: {{ low4 }}  <br/>
+                            Condition: {{ condition4 }}
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

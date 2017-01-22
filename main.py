@@ -19,15 +19,16 @@ def index():
     weather = get_weather()
     forecast = get_forecast()
     return render_template("index.html", current_temp=weather['temp'], current_weather=weather['description'],
-                           wind_speed=weather['wind_speed'], date0=forecast[0]['day'], high0=forecast[0]['high'],
+                           wind_speed=weather['wind_speed'], icon=weather["icon"],
+                           date0=forecast[0]['day'], high0=forecast[0]['high'], icon0=forecast[0]['icon'],
                            low0=forecast[0]['low'], condition0=forecast[0]['condition'],
-                           date1=forecast[1]['day'], high1=forecast[1]['high'],
+                           date1=forecast[1]['day'], high1=forecast[1]['high'], icon1=forecast[1]['icon'],
                            low1=forecast[1]['low'], condition1=forecast[1]['condition'],
-                           date2=forecast[2]['day'], high2=forecast[2]['high'],
+                           date2=forecast[2]['day'], high2=forecast[2]['high'], icon2=forecast[2]['icon'],
                            low2=forecast[2]['low'], condition2=forecast[2]['condition'],
-                           date3=forecast[3]['day'], high3=forecast[3]['high'],
+                           date3=forecast[3]['day'], high3=forecast[3]['high'], icon3=forecast[3]['icon'],
                            low3=forecast[3]['low'], condition3=forecast[3]['condition'],
-                           date4=forecast[4]['day'], high4=forecast[4]['high'],
+                           date4=forecast[4]['day'], high4=forecast[4]['high'], icon4=forecast[4]['icon'],
                            low4=forecast[4]['low'], condition4=forecast[4]['condition']
                            )
 
@@ -52,6 +53,7 @@ def get_weather():
     weather["wind_speed"] = now['wind_mph']
     weather["wind_direction"] = now['wind_dir']
     weather["pressure"] = now['pressure_in']
+    weather["icon"] = now['condition']['icon']
     return weather
 
 

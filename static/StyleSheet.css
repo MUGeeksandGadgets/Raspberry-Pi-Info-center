@@ -1,3 +1,22 @@
 #calendar{
 
 }
+
+.image{
+    text-align: center;
+}
+
+.image_divider{
+    clear: both;
+}
+
+#five_day{
+    width: 80%;
+    margin: auto;
+}
+
+#forecast{
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
