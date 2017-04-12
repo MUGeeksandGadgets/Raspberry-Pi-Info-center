@@ -1,22 +1,154 @@
-#calendar{
-
+body {
+    height: 100vh;
 }
 
-.image{
-    text-align: center;
+
+/*FONT IMPORT*/
+
+@font-face {
+    font-family: roboto-regular;
+    src: url(font/roboto-regular.ttf);
 }
 
-.image_divider{
+
+/*FONT*/
+
+* {
+    font-family: 'roboto-regular';
+    color: black;
+}
+
+
+/******** BLOCKS *****/
+
+.blocks {
+    background-color: #125D53;
+}
+
+.topBlocks {
+    width: calc(50vw - 3em);
+}
+
+#topLeftBlock {
+    float: left;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: .5em;
+    margin-top: 1em;
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+}
+
+#topRightBlock {
+    float: right;
+    height: 2em;
+    margin-bottom: 1em;
+    margin-left: .5em;
+    margin-right: 1em;
+    margin-top: 1em;
+    height: 50%;
+}
+
+#bottomBlock {
     clear: both;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
 }
 
-#five_day{
-    width: 80%;
-    margin: auto;
-}
 
-#forecast{
-    margin: auto;
+/******* CLOCk *****/
+
+#clock {
     text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: .5em;
+    display: block;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    /* The above is shorthand for:
+  flex-grow: 0,
+  flex-shrink: 1,
+  flex-basis: auto
+  */
+}
+
+
+/****** CURRENT WEATHER ***********/
+
+#topLeftBlock #image {
+    float: left;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: .5em;
+    margin-top: 1em;
+    width: calc(50% - 2em);
+    background: red;
+}
+
+#topLeftBlock #text {
+    float: right;
+    margin-bottom: 1em;
+    margin-left: .5em;
+    margin-right: 1em;
+    margin-top: 1em;
+    width: calc(50% - 2em);
+    background: pink;
+}
+
+#wrapper {
+    background: yellow;
     width: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+#wrapper2 {}
+
+
+/************TABLE ****************/
+
+#forecast thead tr td h2 {
+    text-align: center;
+}
+
+#forecast {
+    width: 100%;
+    height: 40%;
+}
+
+#forecast p {
+    text-align: center;
+}
+
+
+/*Images*/
+
+img {
+    width: 6em;
+    display: block;
+    margin: auto;
+}
+
+
+/*text*/
+
+p {
+    line-height: 2em;
+    font-size: 1.3em;
+}
+
+h 2 {
+    font-size: 2em;
 }

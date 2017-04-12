@@ -1,87 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" type="text/css" href="/static/StyleSheet.css">
-<meta http-equiv="refresh" content="600" > <!-- this causes the page to refresh every 10 minutes -->
+<meta http-equiv="refresh" content="600">
+<!-- this causes the page to refresh every 10 minutes -->
+
 <head>
     <meta charset="UTF-8">
     <title>Weather Test</title>
 </head>
-<script src="/static/clock.js"> // manages the clock</script>
+<script src="/static/clock.js">
+    // manages the clock
+
+</script>
+
 <body onload="startClock()">
 
-    <h2>Current Time</h2>
-    <div id="clock"></div>
+    <div id="topLeftBlock" class="topBlocks blocks">
+        <div id="clock"></div>
+        <div id="wrapper">
+            <div id="wrapper2">
+                <div id="image">
+                    <img src="{{ icon }}">
+                </div>
+                <div id="text">
+                    <p>Current temp: {{ current_temp }} &deg;F<br> Current Conditions: {{ current_weather }}<br> Wind speed: {{ wind_speed }} mph</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <h2>Current Weather</h2>
-        <p>
-            <img src="{{ icon }}">
-            <div class="image_divider"></div>
-            Current temp: {{ current_temp }} &deg;F<br/>
-            Current Conditions: {{ current_weather }}<br/>
-            Wind speed: {{ wind_speed }} mph
-        <p/>
-        <hr/>
+    <div id="topRightBlock" class="topBlocks blocks"></div>
 
-    <h2>5 Day Forecast</h2>
-    <div id="five_day">
-        <table id="forecast">
-            <tbody>
-                <tr>
-                    <th>{{ date0 }} (Today)</th>
-                    <th>{{ date1 }}</th>
-                    <th>{{ date2 }}</th>
-                    <th>{{ date3 }}</th>
-                    <th>{{ date4 }}</th>
-                </tr>
-                <tr>
-                    <td>
-                        <p>
+    <div id="bottomBlock" class="blocks">
+        <div id="five_day">
+            <table id="forecast">
+                <thead>
+                    <tr>
+                        <td colspan="5">
+                            <h2>5 Day Forecast</h2>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>
+                            <p>{{ date0 }} (Today)</p>
+                        </th>
+                        <th>
+                            <p>{{ date1 }}</p>
+                        </th>
+                        <th>
+                            <p>{{ date2 }}</p>
+                        </th>
+                        <th>
+                            <p>{{ date3 }}</p>
+                        </th>
+                        <th>
+                            <p>{{ date4 }}</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
                             <img src="{{ icon0 }}" class="image">
-                            <div class="image_divider"></div>
-                            High: {{ high0 }} &deg;F <br/>
-                            Low: {{ low0 }} &deg;F <br/>
-                            Condition: {{ condition0 }}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
+                            <p>High: {{ high0 }} &deg;F <br/> Low: {{ low0 }} &deg;F <br/> Condition: {{ condition0 }}</p>
+                        </td>
+                        <td>
                             <img src="{{ icon1 }}" class="image">
-                            <div class="image_divider"></div>
-                            High: {{ high1 }} &deg;F <br/>
-                            Low: {{ low1 }} &deg;F <br/>
-                            Condition: {{ condition1 }}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
+                            <p>High: {{ high1 }} &deg;F <br/> Low: {{ low1 }} &deg;F <br/> Condition: {{ condition1 }}</p>
+                        </td>
+                        <td>
                             <img src="{{ icon2 }}" class="image">
-                            <div class="image_divider"></div>
-                            High: {{ high2 }} &deg;F <br/>
-                            Low: {{ low2 }} &deg;F <br/>
-                            Condition: {{ condition2 }}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
+                            <p>High: {{ high2 }} &deg;F <br/> Low: {{ low2 }} &deg;F <br/> Condition: {{ condition2 }}</p>
+                        </td>
+                        <td>
                             <img src="{{ icon3 }}" class="image">
-                            <div class="image_divider"></div>
-                            High: {{ high3 }} &deg;F <br/>
-                            Low: {{ low3 }} &deg;F <br/>
-                            Condition: {{ condition3 }}
-                        </p>
-                    </td>
-                    <td>
-                        <p>
+                            <p>High: {{ high3 }} &deg;F <br/> Low: {{ low3 }} &deg;F <br/> Condition: {{ condition3 }}</p>
+                        </td>
+                        <td>
                             <img src="{{ icon4 }}" class="image">
-                            <div class="image_divider"></div>
-                            High: {{ high4 }} &deg;F <br/>
-                            Low: {{ low4 }}  <br/>
-                            Condition: {{ condition4 }}
-                        </p>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                            <p>High: {{ high4 }} &deg;F <br/> Low: {{ low4 }} <br/> Condition: {{ condition4 }}</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
+
 </html>
