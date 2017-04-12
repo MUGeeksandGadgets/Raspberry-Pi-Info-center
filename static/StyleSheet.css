@@ -1,5 +1,7 @@
 body {
     height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
 }
 
 
@@ -26,7 +28,7 @@ body {
 }
 
 .topBlocks {
-    width: calc(50vw - 3em);
+    width: calc(50vw - 2.25em);
 }
 
 #topLeftBlock {
@@ -47,7 +49,6 @@ body {
 
 #topRightBlock {
     float: right;
-    height: 2em;
     margin-bottom: 1em;
     margin-left: .5em;
     margin-right: 1em;
@@ -72,15 +73,8 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     margin: .5em;
+    padding: 0;
     display: block;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-    /* The above is shorthand for:
-  flex-grow: 0,
-  flex-shrink: 1,
-  flex-basis: auto
-  */
 }
 
 
@@ -93,7 +87,15 @@ body {
     margin-right: .5em;
     margin-top: 1em;
     width: calc(50% - 2em);
-    background: red;
+}
+
+#topLeftBlock #image img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 50%;
+    margin: auto;
 }
 
 #topLeftBlock #text {
@@ -103,18 +105,31 @@ body {
     margin-right: 1em;
     margin-top: 1em;
     width: calc(50% - 2em);
-    background: pink;
 }
 
 #wrapper {
-    background: yellow;
     width: 100%;
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
+    height: calc(100% - 3em);
 }
 
-#wrapper2 {}
+#wrapper2 {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
 
 
 /************TABLE ****************/
@@ -123,13 +138,24 @@ body {
     text-align: center;
 }
 
+#forecast tbody tr td {
+    width: 20%;
+}
+
+#forecast tbody tr:nth-child(2) td p {
+    padding: 0;
+    margin: 0;
+}
+
 #forecast {
     width: 100%;
-    height: 40%;
+    height: 50%;
+    overflow: hidden;
 }
 
 #forecast p {
     text-align: center;
+    word-wrap: break-word;
 }
 
 
@@ -149,6 +175,6 @@ p {
     font-size: 1.3em;
 }
 
-h 2 {
+h2 {
     font-size: 2em;
 }

@@ -20,7 +20,7 @@
         <div id="wrapper">
             <div id="wrapper2">
                 <div id="image">
-                    <img src="{{ icon }}">
+                    <img src="{{ icon }}" onerror="this.src='../static/weather.png'; this.onerror=null;">
                 </div>
                 <div id="text">
                     <p>Current temp: {{ current_temp }} &deg;F<br> Current Conditions: {{ current_weather }}<br> Wind speed: {{ wind_speed }} mph</p>
@@ -32,7 +32,7 @@
     <div id="topRightBlock" class="topBlocks blocks"></div>
 
     <div id="bottomBlock" class="blocks">
-        <div id="five_day">
+        <div id="fiveDay">
             <table id="forecast">
                 <thead>
                     <tr>
@@ -61,23 +61,23 @@
                     </tr>
                     <tr>
                         <td>
-                            <img src="{{ icon0 }}" class="image">
+                            <img src="{{ icon0 }}" class="image" onerror="this.src='../static/weather.png'; this.onerror=null;">
                             <p>High: {{ high0 }} &deg;F <br/> Low: {{ low0 }} &deg;F <br/> Condition: {{ condition0 }}</p>
                         </td>
                         <td>
-                            <img src="{{ icon1 }}" class="image">
+                            <img src="{{ icon1 }}" class="image" onerror="this.src='../static/weather.png'; this.onerror=null;">
                             <p>High: {{ high1 }} &deg;F <br/> Low: {{ low1 }} &deg;F <br/> Condition: {{ condition1 }}</p>
                         </td>
                         <td>
-                            <img src="{{ icon2 }}" class="image">
+                            <img src="{{ icon2 }}" class="image" onerror="this.src='../static/weather.png'; this.onerror=null;">
                             <p>High: {{ high2 }} &deg;F <br/> Low: {{ low2 }} &deg;F <br/> Condition: {{ condition2 }}</p>
                         </td>
                         <td>
-                            <img src="{{ icon3 }}" class="image">
+                            <img src="{{ icon3 }}" class="image" onerror="this.src='../static/weather.png'; this.onerror=null;">
                             <p>High: {{ high3 }} &deg;F <br/> Low: {{ low3 }} &deg;F <br/> Condition: {{ condition3 }}</p>
                         </td>
                         <td>
-                            <img src="{{ icon4 }}" class="image">
+                            <img src="{{ icon4 }}" class="image" onerror="this.src='../static/weather.png'; this.onerror=null;">
                             <p>High: {{ high4 }} &deg;F <br/> Low: {{ low4 }} <br/> Condition: {{ condition4 }}</p>
                         </td>
                     </tr>
